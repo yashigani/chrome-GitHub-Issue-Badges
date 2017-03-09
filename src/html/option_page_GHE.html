@@ -1,26 +1,38 @@
 <html>
   <head>
     <script type="text/javascript" src="/js/options.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-      input[type="text"] {
-        width: 500px;
+      textarea {
+        width: 480px;
+        height: 320px;
       }
     </style>
   </head>
   <body>
-    <form>
-      <ul>
-        <li class="github-config">
-          <h3>Github Enterprise</h3>
-          <table>
-            <tr><td>origin   </td><td><input type="text" name="origin" /></td></tr>
-            <tr><td>api root </td><td><input type="text" name="api-root" disabled /></td></tr>
-            <tr><td>token    </td><td><input type="text" name="token" /></td></tr>
-          </table>
-          <button class="test-button" type="button">connection test</button>
-        </li>
-      </ul>
+    <div class="container">
+      <h3>Github Enterprise</h3>
+      <p>
+        <textarea class="configuration">
+        </textarea>
+      </p>
+
+      <button class="test-button" type="button">connection test</button>
       <button class="save-button" type="button">save</button>
-    </form>
+
+      <h3>Help</h3>
+      <p>
+        <pre>
+// sample: configuration of github.com
+[
+  {
+    "origin": "https://github.com",
+    "apiRoot": "https://api.github.com",
+    "token": "access token: generate by https://github.com/settings/tokens"
+  }
+]
+        </pre>
+      </p>
+    </div>
   </body>
 </html>
